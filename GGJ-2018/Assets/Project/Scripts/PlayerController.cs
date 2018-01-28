@@ -14,7 +14,7 @@ public class PlayerController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		toggle = GameObject.FindGameObjectWithTag ("Toggle").GetComponent <Toggle> ();
+//		toggle = GameObject.FindGameObjectWithTag ("Toggle").GetComponent <Toggle> ();
 		pos = transform.position;
 		rigid = GetComponent<Rigidbody> ();
 	}
