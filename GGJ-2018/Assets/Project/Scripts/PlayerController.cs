@@ -19,4 +19,8 @@ public class PlayerController : MonoBehaviour {
 		if (Input.GetMouseButtonDown (0) || Input.GetAxis("Vertical")>0.01)
 			rigid.velocity = GameObject.FindGameObjectWithTag("MainCamera").transform.forward * mv_speed;
 	}
+
+	public bool IsInfected() {
+		return IsMosquitoInfected;
+	}
 }
