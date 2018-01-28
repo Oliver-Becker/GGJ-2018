@@ -6,6 +6,8 @@ public class CharacterManager : MonoBehaviour {
 
 	public GameObject character;
 
+	public int sick_count;
+
 	public float _immunization_time;
 	public _CharacterStatus[] _characterstatus;
 	private float _time_counter;
