@@ -6,11 +6,17 @@ public class CharacterManager : MonoBehaviour {
 
 	public GameObject character;
 
+	public float _immunization_time;
+	public _CharacterStatus[] _characterstatus;
+	private float _time_counter;
+	private int _aux;
+
 	private int numChars = 20;
 
 	// Use this for initialization
 	void Start () {
 		Vector3 newPosition;
+		_characterstatus = new _CharacterStatus[numChars];
 
 		for(int i = 0; i < numChars; i++){
 			newPosition = new Vector3 (Random.Range(-34.0f, 32.0f), 0.5f, Random.Range(-38.0f, 28.0f));
@@ -22,15 +28,39 @@ public class CharacterManager : MonoBehaviour {
 
 				newCharacter.transform.parent = gameObject.transform;
 				newCharacter.transform.Rotate (new Vector3 (0f, Random.Range (-180.0f, 180.0f), 0f));
+
+				_characterstatus [i] = newCharacter.GetComponent<_CharacterStatus> ();
+
+				if (i == 0) {
+					_characterstatus [0]._status = _CharacterStatus._Modes.Sick;
+					_characterstatus [0]._ChangeCollor (_CharacterStatus._Modes.Sick);
+				} else {
+					_characterstatus [i]._status = _CharacterStatus._Modes.Vulnerable;
+					_characterstatus [i]._ChangeCollor (_CharacterStatus._Modes.Vulnerable);
+				}
+
 			} else {
 				i--;
 			}
 		}
-		
+
+		_characterstatus [0]._status = _CharacterStatus._Modes.Sick;
+		_characterstatus [0]._ChangeCollor (_CharacterStatus._Modes.Sick);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+		_time_counter += Time.deltaTime;
+		if (_time_counter > _immunization_time) {
+			_time_counter = 0;
+			_aux = 1;
+			while (_aux < numChars && _characterstatus [_aux]._status != _CharacterStatus._Modes.Vulnerable)
+				_aux++;
+
+			if (_aux < numChars && _characterstatus [_aux]._status == _CharacterStatus._Modes.Vulnerable) {
+				_characterstatus [_aux]._status = _CharacterStatus._Modes.Immune;
+				_characterstatus [_aux]._ChangeCollor (_CharacterStatus._Modes.Immune);
+			}
+		}
 	}
 }

@@ -20,7 +20,7 @@ MonoBehaviour:
   m_ShowMode: 4
   m_Title: 
   m_RootView: {fileID: 2}
-  m_MinSize: {x: 950, y: 521}
+  m_MinSize: {x: 950, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
 --- !u!114 &2
 MonoBehaviour:
@@ -110,7 +110,7 @@ MonoBehaviour:
   m_MinSize: {x: 713, y: 471}
   m_MaxSize: {x: 18008, y: 14021}
   vertical: 0
-  controlID: 10
+  controlID: 46
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -211,7 +211,7 @@ MonoBehaviour:
   m_MinSize: {x: 234, y: 471}
   m_MaxSize: {x: 10004, y: 14021}
   vertical: 1
-  controlID: 74
+  controlID: 60
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -417,14 +417,14 @@ MonoBehaviour:
     width: 759
     height: 360
   m_SceneLighting: 1
-  lastFramingTime: 2873.1860576698978
+  lastFramingTime: 10149.423396382299
   m_2DMode: 0
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -42.197628, y: -101.41163, z: -121.11796}
+    m_Target: {x: 0.79183245, y: 12.927325, z: 2.9147398}
     speed: 2
-    m_Value: {x: -42.197628, y: -101.41163, z: -121.11796}
+    m_Value: {x: 0.79183245, y: 12.927325, z: 2.9147398}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -447,13 +447,13 @@ MonoBehaviour:
       speed: 2
       m_Value: 0
   m_Rotation:
-    m_Target: {x: -0.05396087, y: 0.91836727, z: -0.36820638, w: -0.13458802}
+    m_Target: {x: 0.08623153, y: 0.18742181, z: -0.016519254, w: 0.9783478}
     speed: 2
-    m_Value: {x: -0.05396087, y: 0.91836727, z: -0.36820638, w: -0.13458802}
+    m_Value: {x: 0.08623153, y: 0.18742181, z: -0.016519254, w: 0.9783478}
   m_Size:
-    m_Target: 160.30399
+    m_Target: 5.700001
     speed: 2
-    m_Value: 160.30399
+    m_Value: 5.700001
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -557,9 +557,9 @@ MonoBehaviour:
   m_Pos:
     serializedVersion: 2
     x: 0
-    y: 576
-    width: 786
-    height: 130
+    y: 473
+    width: 759
+    height: 233
 --- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -588,23 +588,23 @@ MonoBehaviour:
     height: 280
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: bc580000
-    m_LastClickedID: 22716
-    m_ExpandedIDs: 741efefffc1efeff5620feff826fffffeaeeffff0000000096570000545a0000
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 9c83f7ffba18faffc818faff28e2fcff36e2fcffe4faffffc6fbffff14fcffff18fcffff1afcffff000000009c2c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Characters
-      m_OriginalName: Characters
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 23124
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 0
       m_ClientGUIView: {fileID: 10}
     m_SearchString: 
@@ -651,19 +651,19 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Project/Scripts
+    - Assets/Project/Prefab
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Project/Scripts
+  - Assets/Project/Prefab
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Users\OliverBecker\Documents\GGJ-2018\GGJ-2018
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: fe330000
-    m_LastClickedID: 13310
-    m_ExpandedIDs: 000000008c320000cc320000fc3200000e3300008433000088330000c83300003e39000000ca9a3bffffff7f
+    m_SelectedIDs: 28290000
+    m_LastClickedID: 10536
+    m_ExpandedIDs: 0000000088270000e827000028280000c2280000d8280000de2800005c290000b4290000ae2f0000b02f000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -691,7 +691,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000008c320000cc320000fc3200000e3300007233000088330000e03300003e390000
+    m_ExpandedIDs: 0000000088270000e827000028280000d8280000de2800005c290000ae2f0000b02f0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -719,21 +719,21 @@ MonoBehaviour:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000f02c000024080100a22a0000
+    m_ExpandedInstanceIDs: c6230000f02c000024080100a22a0000000000006228000056290000e083f4ff
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Prefab
-      m_OriginalName: Prefab
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 13228
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_ClientGUIView: {fileID: 11}
     m_CreateAssetUtility:
