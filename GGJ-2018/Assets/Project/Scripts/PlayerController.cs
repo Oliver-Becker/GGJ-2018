@@ -25,13 +25,15 @@ public class PlayerController : MonoBehaviour {
 			rigid.velocity = GameObject.FindGameObjectWithTag("MainCamera").transform.forward * mv_speed;
 	}
 
-	public void reset() {
+	public void reset_pos() {
 		transform.position = pos;
-		toggle.isOn = false;
+		IsMosquitoInfected = false;
+//		toggle.isOn = IsMosquitoInfected;
 		rigid.velocity = new Vector3 (0, 0, 0);
+
 	}
 
 	void OnCollisionEnter() {
-		reset ();
+		reset_pos ();
 	}
 }

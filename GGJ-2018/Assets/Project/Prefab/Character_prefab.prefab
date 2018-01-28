@@ -2987,11 +2987,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42519f53f5d8e77469536e23158efd1b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  charactermanager: {fileID: 0}
   mosquitoflight: {fileID: 0}
   _characterstatus: {fileID: 0}
   fillTime: 2
   Canvas: {fileID: 1701432427916176}
   TestCanvas: 1
+  toggle: {fileID: 0}
 --- !u!114 &114941545206626364
 MonoBehaviour:
   m_ObjectHideFlags: 1

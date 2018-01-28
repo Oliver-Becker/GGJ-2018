@@ -4,6 +4,7 @@ using UnityEngine.UI;
 using UnityEngine;
 
 public class VRSlider : MonoBehaviour {
+	public CharacterManager charactermanager;
 	public PlayerController mosquitoflight;
 	public _CharacterStatus _characterstatus;
     public float fillTime = 2f;
@@ -17,6 +18,7 @@ public class VRSlider : MonoBehaviour {
 	public Toggle toggle;
     // Use this for initialization
     void Start() {
+		charactermanager = GameObject.FindGameObjectWithTag ("GameController").GetComponent <CharacterManager> ();
 		toggle = GameObject.FindGameObjectWithTag ("Toggle").GetComponent <Toggle> ();
 		mosquitoflight = GameObject.FindGameObjectWithTag ("Player").GetComponent <PlayerController> ();
 		_characterstatus = GetComponentInParent<_CharacterStatus> ();
@@ -100,6 +102,7 @@ public class VRSlider : MonoBehaviour {
 		if (_characterstatus._status == _CharacterStatus._Modes.Vulnerable && mosquitoflight.IsMosquitoInfected == true) {
 			_characterstatus._status = _CharacterStatus._Modes.Sick;
 			_characterstatus._ChangeCollor (_CharacterStatus._Modes.Sick);
+			charactermanager._sick_count++;
 		}
     }
 }
