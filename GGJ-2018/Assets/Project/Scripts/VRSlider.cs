@@ -15,11 +15,11 @@ public class VRSlider : MonoBehaviour {
     public GameObject Canvas;
     public bool TestCanvas;
 
-	public Toggle toggle;
+//	public Toggle toggle;
     // Use this for initialization
     void Start() {
 		charactermanager = GameObject.FindGameObjectWithTag ("GameController").GetComponent <CharacterManager> ();
-		toggle = GameObject.FindGameObjectWithTag ("Toggle").GetComponent <Toggle> ();
+//		toggle = GameObject.FindGameObjectWithTag ("Toggle").GetComponent <Toggle> ();
 		mosquitoflight = GameObject.FindGameObjectWithTag ("Player").GetComponent <PlayerController> ();
 		_characterstatus = GetComponentInParent<_CharacterStatus> ();
 		if (_characterstatus == null)
@@ -97,7 +97,7 @@ public class VRSlider : MonoBehaviour {
         //Realiza uma ação depois que preenche a barra
 		if (_characterstatus._status == _CharacterStatus._Modes.Sick && mosquitoflight.IsMosquitoInfected == false) {
 			mosquitoflight.IsMosquitoInfected = true;
-			toggle.isOn = true;
+//			toggle.isOn = true;
 		}
 		if (_characterstatus._status == _CharacterStatus._Modes.Vulnerable && mosquitoflight.IsMosquitoInfected == true) {
 			_characterstatus._status = _CharacterStatus._Modes.Sick;

@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour {
 
 	public bool IsMosquitoInfected;
 	public Vector3 pos;
-	public Toggle toggle;
+//	public Toggle toggle;
 
 	public float mv_speed;
 	private Rigidbody rigid;
