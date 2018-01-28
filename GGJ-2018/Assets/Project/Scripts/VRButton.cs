@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using UnityEngine.SceneManagement;
 public class VRButton : MonoBehaviour {
 	private float fillTime = 2f;
 	private float timer;
 	private Slider mySlider;
 	private Coroutine fillBarRoutine;
+	public GameObject slider;
+	public string Scene;
 	// Use this for initialization
 	void Start () {
 		mySlider = GetComponent<Slider>();
@@ -42,8 +44,10 @@ public class VRButton : MonoBehaviour {
 
 	}
 	private void OnBarFilled()
-	{
+	{	
 		Debug.Log ("carrega cena");
+		slider.SetActive(false);
+		SceneManager.LoadScene (Scene);
 	}
 
 }
